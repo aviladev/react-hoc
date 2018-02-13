@@ -10,7 +10,7 @@ class Header extends Component {
 
   render () {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3">
         <div className="container">
           <ul className="nav navbar-nav">
             <li className="nav-item">

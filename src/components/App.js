@@ -1,10 +1,13 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import Header from './Header'
 
 const App = () => {
   return (
-    <div>
-      <h1>React HOC</h1>
-    </div>
+    <Router>
+      <Header />
+    </Router>
   )
 }
 

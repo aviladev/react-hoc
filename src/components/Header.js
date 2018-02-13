@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+
+import { authenticate } from '../actions'
 
 class Header extends Component {
   authButton = () => (
-    <form className="form-inline">
-      <button className="btn btn-outline-success my-2 my-sm-0">Sign In</button>
+    <form className="form-inline"
+      onSubmit={e => {
+        e.preventDefault()
+        this.props.authenticate(!this.props.authenticated)
+      }}
+    >
+      <button
+        className="btn btn-outline-success my-2 my-sm-0"
+      >
+        {this.props.authenticated
+          ? 'Sign Out'
+          : 'Sign In'
+        }
+      </button>
     </form>
   )
 
@@ -29,4 +44,7 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = ({authenticated}) =>
+  ({authenticated})
+
+export default connect(mapStateToProps, {authenticate})(Header)

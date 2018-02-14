@@ -3,11 +3,11 @@ import React from 'react'
 const Resources = () => {
   return (
     <div className="container">
-      Super Secret Recipe
-      <ul>
-        <li>1 Cup Sugar</li>
-        <li>1 Cup Pepper</li>
-        <li>1 Cup Salt</li>
+      <h2 className="mb-3">Super Secret Recipe</h2>
+      <ul className="list-group">
+        <li className="list-group-item">1 Cup Sugar</li>
+        <li className="list-group-item">1 Cup Pepper</li>
+        <li className="list-group-item">1 Cup Salt</li>
       </ul>
     </div>
   )

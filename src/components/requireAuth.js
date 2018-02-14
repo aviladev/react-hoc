@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 export default (ComposedComponent) => {
   class Authentication extends Component {
     componentWillMount () {
-      console.log('HOC will mount')
       if (!this.props.authenticated) {
         this.props.history.push('/')
       }
@@ -18,7 +17,6 @@ export default (ComposedComponent) => {
     }
     
     render () {
-      console.log('HOC Rendered')
       return <ComposedComponent {...this.props} />
     }
   }
